@@ -156,7 +156,7 @@ def confirmation(request):
         contact=request.POST.get('contact')
         department=request.POST.get('department')
         subject= name + ' of ' + department+ ' department, of 1st Year has been Participated in Quizomania. '+ '\n \n His/Her Contact Number is '+ contact +' and  Email ID is ' + email +'.'
-        subject1= "Hey " + name + ", \n Thank you for Participating in Quizomania. \n\nBe Ready for Quiz on 20th June 2021 (Sunday) at 4 PM. Don't miss this amazing Opportunity.\nAll the Best!!!\n\n\n Thanking you \n\n Phoenix\n The Official Tech Club of NSEC\n Kolkata, West Bengal\ne-mail: info@phoenixnsec.in\nWebsite: www.phoenixnsec.in"
+        subject1= "Hey " + name + ", \n Thank you for Participating in Quizomania. \n\nBe Ready for Quiz on 26th June 2021 (Saturday) at 4 PM. Don't miss this amazing Opportunity.\nAll the Best!!!\n\n\n Thanking you \n\n Phoenix\n The Official Tech Club of NSEC\n Kolkata, West Bengal\ne-mail: info@phoenixnsec.in\nWebsite: www.phoenixnsec.in"
 
         abc = quizomania(name = name, email=email, contact=contact, department=department, date=datetime.today())
         abcd = quizomania.objects.all()
@@ -166,7 +166,7 @@ def confirmation(request):
                 return redirect('/events/Quizomania')
         else:
             abc.save()
-        messages.success(request, "Your Form Has Been Submitted. Be Ready for Quiz on 20th June 2021 (Sunday) at 4 PM. Don't miss this amazing Opportunity.")
+        messages.success(request, "Your Form Has Been Submitted. Be Ready for Quiz on 26th June 2021 (Saturday) at 4 PM. Don't miss this amazing Opportunity.")
         send_mail('Quizomania Participation',subject,settings.EMAIL_HOST_USER,['info@phoenixnsec.in'])
         send_mail('Quizomania | PHOENIX',subject1,settings.EMAIL_HOST_USER,[email])
     return render(request,'confirmation.html')
