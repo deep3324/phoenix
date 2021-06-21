@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+<link href="{% static '/css/style-membership.css' %}" rel="stylesheet">
+<title>Quiz-o-Mania | PHOENIX</title>
+{% endblock head %}
+
+
+{% block content %}
+
+<body class="container-fluid px-0">
+    <section id="intro" class="clearfix text-center">
+        <div class="container" data-aos="fade-up">
+            <div class="blog-info" data-aos="zoom-in" data-aos-delay="100">
+                <img class="mb-4" src="{% static '/images/phoenix_white.png' %}" alt="" width="130px">
+                <h2 style="color: #FFF; font-size: 40px; font-weight: 800;">Quiz-o-Mania</h2>
+            </div>
+        </div>
+    </section>
+    <div class="container rules" style="margin-top: 20px">
+    <h5>As Zuckerberg says "You should learn how to program." , we at phoenix are up and about with this thought, to
+            prepare our students for whatever is about to come, and with this motive stands our next event.
+            A quiz where you will be tested on your knowledge of the C language.
+            So gear up and #include everything you know to ace this quiz.
+        </h5>
+        <center><h4><strong>Thank you for Registration. Be alert for Quiz on 20th June 2021 (Sunday) at 4 PM.</strong></h4></center>
+    </div>
+    <div class="container rules" style="margin-top: 20px">
+    <h4><strong> Date:</strong> 20th June 2021</h4>
+        <h4><strong> Time:</strong> 04:00 PM</h4>
+        
+        <h4><strong> No. of Question:</strong> 20</h4>
+        <h4><strong> Time Allowance:</strong> 30 Minutes</h4>
+        <h4><strong> Quiz Link:</strong> <a style="color:red;" target="__blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeEe4HEnBAF3xVJ0RkQWQZbfvIgKgnT8cBBs6RK-fyLwVgDag/viewform?usp=sf_link">Click Here</a></h4>
+        <h4><strong> Scan QR to Easy Access for link:</strong> <br><br> <center><img style="max-width: 250px" src="{% static 'images/qr.png' %}"></center></h4>
+    </div>
+
+    
+</body>
+{% endblock content %}
+
+{% block files %}
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+
+{% endblock files %}
